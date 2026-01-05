@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internadda | Part-Time Jobs & Membership</title>
+    <title>Internadda | Member Portal</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -16,7 +16,6 @@
                 <img src="https://internadda.com/images/logo.jpg" alt="Internadda Logo" style="height: 40px; border-radius: 8px;">
                 <span>Intern<span style="color: #4338ca;">adda</span></span>
             </a>
-
             <nav class="nav-links">
                 <a href="index.html" class="nav-item">
                     <i class="fas fa-home"></i> Home
@@ -24,35 +23,28 @@
                 <a href="#" class="nav-item active-glow">
                     <i class="fas fa-briefcase"></i> Jobs
                 </a>
-                <a href="#" class="nav-item" onclick="openLogin()">
+                <button class="nav-item" style="background:none; border:none; cursor:pointer;" onclick="openLogin()">
                     <i class="fas fa-user-lock"></i> Member Login
-                </a>
+                </button>
             </nav>
         </div>
     </header>
 
-    <main id="mainContent">
+    <main id="mainContainer">
         <section class="hero">
             <div class="container">
-                <div class="hero-badge"><i class="fas fa-shield-alt"></i> Verification Required</div>
-                <h1 class="hero-heading">Unlock Your <span>Member ID</span></h1>
-                <p class="hero-description">To join the official Internadda Member Force, you must complete a mandatory internship task. Choose a field below to start your journey.</p>
+                <div class="hero-badge"><i class="fas fa-shield-alt"></i> Official Recruitment</div>
+                <h1 class="hero-heading">Join our <span>Member Force</span></h1>
+                <p class="hero-description">To earn your Member ID and access the dashboard, you must first complete a mandatory outreach internship task.</p>
                 
                 <div class="field-selector">
-                    <div class="field-card" onclick="startInternship('Marketing')">
+                    <div class="field-card" onclick="alert('Mission Started: Inform 5 students about Internadda to unlock your ID.')">
                         <i class="fas fa-bullhorn"></i>
-                        <h3>Marketing</h3>
-                        <p>Spread the word to students</p>
+                        <h3>Campus Outreach</h3>
                     </div>
-                    <div class="field-card" onclick="startInternship('Lead Gen')">
-                        <i class="fas fa-filter"></i>
-                        <h3>Lead Gen</h3>
-                        <p>Find future interns</p>
-                    </div>
-                    <div class="field-card" onclick="startInternship('Conversion')">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>Conversion</h3>
-                        <p>Guide student success</p>
+                    <div class="field-card" onclick="alert('Mission Started: Generate 3 leads to unlock your ID.')">
+                        <i class="fas fa-users"></i>
+                        <h3>Lead Generation</h3>
                     </div>
                 </div>
             </div>
@@ -62,22 +54,19 @@
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeLogin()">&times;</span>
-            <div style="text-align: center; margin-bottom: 25px;">
-                <h2 style="font-size: 1.5rem; font-weight: 800;">Member Login</h2>
-                <p style="color: #718096; font-size: 0.9rem;">Access your professional dashboard</p>
-            </div>
+            <h2 style="text-align:center; margin-bottom:20px;">Member Login</h2>
             <form id="loginForm">
                 <div class="input-group">
                     <label>Member ID</label>
-                    <input type="text" id="memberId" placeholder="e.g. 1001" required>
+                    <input type="text" id="memberId" placeholder="Enter ID" required>
                 </div>
                 <div class="input-group">
                     <label>Password</label>
-                    <input type="password" id="password" placeholder="••••••••" required>
+                    <input type="password" id="password" placeholder="Enter Password" required>
                 </div>
-                <button type="submit" class="btn-primary" style="width: 100%; margin-top: 10px;">Verify & Enter</button>
+                <button type="submit" class="btn-primary" style="width:100%">Verify & Login</button>
             </form>
-            <p id="error" style="color:#dc2626; text-align:center; margin-top:15px; font-weight:600; font-size: 0.9rem;"></p>
+            <p id="error" style="color:#dc2626; text-align:center; margin-top:15px; font-weight:600;"></p>
         </div>
     </div>
 
@@ -87,18 +76,12 @@
                 <div class="footer-brand">
                     <div class="footer-logo">Internadda</div>
                     <p class="footer-description">Transforming careers through learning, interning, and earning opportunities.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    </div>
                 </div>
                 <div class="footer-links-column">
-                    <h3 class="footer-links-title">Quick Links</h3>
+                    <h3 class="footer-links-title">InternAdda</h3>
                     <ul class="footer-links">
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
